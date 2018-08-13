@@ -1,0 +1,19 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      # 配置仓库分支
+      label: master
+      server:
+        git:
+          # 配置git仓库地址
+          uri: https://github.com/chengliangzhou/spring-cloud-config-repo/
+          # 配置仓库路径
+          searchPaths: /**
+          # 如果为公开仓库，则不用配置用户名和密码
+          username:
+          password:
